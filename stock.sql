@@ -41,7 +41,7 @@ LEFT JOIN mckinsey ON pwc.date = mckinsey.date;
 
 -- calculating metrics for tables of quarters to furnish in master table
 -- first quarter
-CREATE TABLE IF NOT EXISTS quarter1_summary AS
+CREATE VIEW quarter1_summary AS
 WITH moving_avg AS (
     SELECT
         date,
@@ -157,7 +157,7 @@ SELECT *,
 FROM quarterly_metrics;
 
 -- table for quarter 2
-CREATE TABLE IF NOT EXISTS quarter1_summary AS
+CREATE VIEW quarter1_summary AS
 WITH moving_avg AS (
     SELECT
         date,
@@ -273,7 +273,7 @@ SELECT *,
 FROM quarterly_metrics;
 
 --quarter 3 table
-CREATE TABLE IF NOT EXISTS quarter1_summary AS
+CREATE VIEW quarter1_summary AS
 WITH moving_avg AS (
     SELECT
         date,
